@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service ProcessService {
+  rpc Process (ProcessRequest) returns (ProcessResponse);
+}
+
+message ProcessRequest {
+  repeated int32 numbers = 1;
+}
+
+message ProcessResponse {
+  int32 result = 1;
+}
